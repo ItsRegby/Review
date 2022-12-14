@@ -47,29 +47,26 @@ namespace EndProject
             }
         }
 
-        private void EasyMenuItem_Click(object sender, EventArgs e)
+        private void SmallMapMenuItem_Click(object sender, EventArgs e)
         {
             height = 10;
             width = 15;
-            mineCount = 25;
             RemoveCells(gameField);
             Init();
         }
 
-        private void NormalMenuItem_Click(object sender, EventArgs e)
+        private void NormalMapMenuItem_Click(object sender, EventArgs e)
         {
             height = 15;
             width = 20;
-            mineCount = 30;
             RemoveCells(gameField);
             Init();
         }
 
-        private void HardMenuItem_Click(object sender, EventArgs e)
+        private void BigMapMenuItem_Click(object sender, EventArgs e)
         {
             height = 15;
-            width = 25;
-            mineCount = 35;
+            width = 30;
             RemoveCells(gameField);
             Init();
         }

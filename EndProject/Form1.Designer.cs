@@ -30,10 +30,10 @@
         {
             this.Menu = new System.Windows.Forms.MenuStrip();
             this.MenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.DifficultMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.EasyMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.NormalMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.HardMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.SizeMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.SmallMapMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.NormalMapMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.BigMapMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.QuitMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RestartMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Menu.SuspendLayout();
@@ -50,52 +50,52 @@
             this.Menu.Padding = new System.Windows.Forms.Padding(7, 3, 0, 3);
             this.Menu.Size = new System.Drawing.Size(914, 30);
             this.Menu.TabIndex = 0;
-            this.Menu.Text = "menuStrip1";
+            this.Menu.Text = "Menu";
             // 
             // MenuItem
             // 
             this.MenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.DifficultMenuItem,
+            this.SizeMenuItem,
             this.QuitMenuItem});
             this.MenuItem.Name = "MenuItem";
             this.MenuItem.Size = new System.Drawing.Size(60, 24);
             this.MenuItem.Text = "Menu";
             // 
-            // DifficultMenuItem
+            // SizeMenuItem
             // 
-            this.DifficultMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.EasyMenuItem,
-            this.NormalMenuItem,
-            this.HardMenuItem});
-            this.DifficultMenuItem.Name = "DifficultMenuItem";
-            this.DifficultMenuItem.Size = new System.Drawing.Size(187, 26);
-            this.DifficultMenuItem.Text = "Difficulty level";
+            this.SizeMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.SmallMapMenuItem,
+            this.NormalMapMenuItem,
+            this.BigMapMenuItem});
+            this.SizeMenuItem.Name = "SizeMenuItem";
+            this.SizeMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.SizeMenuItem.Text = "Map size";
             // 
-            // EasyMenuItem
+            // SmallMapMenuItem
             // 
-            this.EasyMenuItem.Name = "EasyMenuItem";
-            this.EasyMenuItem.Size = new System.Drawing.Size(142, 26);
-            this.EasyMenuItem.Text = "Easy";
-            this.EasyMenuItem.Click += new System.EventHandler(this.EasyMenuItem_Click);
+            this.SmallMapMenuItem.Name = "SmallMapMenuItem";
+            this.SmallMapMenuItem.Size = new System.Drawing.Size(229, 26);
+            this.SmallMapMenuItem.Text = "Small map (10x15)";
+            this.SmallMapMenuItem.Click += new System.EventHandler(this.SmallMapMenuItem_Click);
             // 
-            // NormalMenuItem
+            // NormalMapMenuItem
             // 
-            this.NormalMenuItem.Name = "NormalMenuItem";
-            this.NormalMenuItem.Size = new System.Drawing.Size(142, 26);
-            this.NormalMenuItem.Text = "Normal";
-            this.NormalMenuItem.Click += new System.EventHandler(this.NormalMenuItem_Click);
+            this.NormalMapMenuItem.Name = "NormalMapMenuItem";
+            this.NormalMapMenuItem.Size = new System.Drawing.Size(229, 26);
+            this.NormalMapMenuItem.Text = "Normal map (15x20)";
+            this.NormalMapMenuItem.Click += new System.EventHandler(this.NormalMapMenuItem_Click);
             // 
-            // HardMenuItem
+            // BigMapMenuItem
             // 
-            this.HardMenuItem.Name = "HardMenuItem";
-            this.HardMenuItem.Size = new System.Drawing.Size(142, 26);
-            this.HardMenuItem.Text = "Hard";
-            this.HardMenuItem.Click += new System.EventHandler(this.HardMenuItem_Click);
+            this.BigMapMenuItem.Name = "BigMapMenuItem";
+            this.BigMapMenuItem.Size = new System.Drawing.Size(229, 26);
+            this.BigMapMenuItem.Text = "Big map (15x30)";
+            this.BigMapMenuItem.Click += new System.EventHandler(this.BigMapMenuItem_Click);
             // 
             // QuitMenuItem
             // 
             this.QuitMenuItem.Name = "QuitMenuItem";
-            this.QuitMenuItem.Size = new System.Drawing.Size(187, 26);
+            this.QuitMenuItem.Size = new System.Drawing.Size(224, 26);
             this.QuitMenuItem.Text = "Quit";
             this.QuitMenuItem.Click += new System.EventHandler(this.QuitMenuItem_Click);
             // 
@@ -130,10 +130,10 @@
 
         private System.Windows.Forms.MenuStrip Menu;
         private System.Windows.Forms.ToolStripMenuItem MenuItem;
-        private System.Windows.Forms.ToolStripMenuItem DifficultMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem EasyMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem NormalMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem HardMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem SizeMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem SmallMapMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem NormalMapMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem BigMapMenuItem;
         private System.Windows.Forms.ToolStripMenuItem QuitMenuItem;
         private System.Windows.Forms.ToolStripMenuItem RestartMenuItem;
     }

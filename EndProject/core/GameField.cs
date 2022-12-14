@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Media;
 using System.Windows.Forms;
 
 namespace EndProject.core
@@ -13,6 +14,7 @@ namespace EndProject.core
         public int mineCount;
         public Position position = new Position(0, 0);
         public int[,] rawCells;
+        public int[] x;
         public Cell[,] cells;
         public bool isPlayeble = true;
         public Bot bot;
@@ -81,14 +83,47 @@ namespace EndProject.core
                     else { mapCreate[x, y] = 0; }
                 }
             }
-            for (int x = 0; x < 2; x++)
+            mapCreate = MapCheck(mapCreate);
+            return mapCreate;
+        }
+        public int[,] MapCheck(int[,] map)
+        {
+            int[] position = new int[2];
+            for (int i = 0; i < width; i++)
             {
-                for (int y = 0; y < 2; y++)
+                for (int j = 0; j < height; j++)
                 {
-                    mapCreate[x, y] = 0;
+                    position[0] = i;
+                    position[1] = j;
+                    if (position[0] > 0 && position[1] > 0)
+                    {
+                        break;
+                    }
+                    if (position[0] + 1 < map.GetLength(0) && position[1] + 1 < map.GetLength(1))
+                    {
+                        if (map[position[0] + 1, position[1]] == 1 && map[position[0], position[1] + 1] == 1 )
+                        {
+                            map[position[0] + 1, position[1]] = 0;
+                            map[position[0], position[1] + 1] = 0;
+                        }
+                    }
+                    else if (position[0] + 1 < map.GetLength(0))
+                    {
+                        if (map[position[0] + 1, position[1]] == 1 && position[1] + 1 == height)
+                        {
+                            map[position[0] + 1, position[1]] = 0;
+                        }
+                    }
+                    else if (position[1] + 1 < map.GetLength(1))
+                    {
+                        if (map[position[0], position[1] + 1] == 1 && position[0] + 1 == width)
+                        {
+                            map[position[0], position[1] + 1] = 0;
+                        }
+                    }
                 }
             }
-            return mapCreate;
+            return map;
         }
         public Cell[,] getCells()
         {
