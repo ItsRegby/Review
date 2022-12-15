@@ -49,7 +49,7 @@ namespace EndProject.core
         {
             return status;
         }
-
+        public override string ToString() { return $"Status: {status}, X: {x}, Y: {y}]"; }
 
     }
 }

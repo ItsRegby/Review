@@ -211,21 +211,6 @@ namespace EndProject.core
             return isPlayeble;
         }
 
-        public static bool HasNextMove(GameField gameField, Position position)
-        {
-            bool isPlayeble = true;
-            int nextXIndex = position.x + 1;
-            int nextYIndex = position.y + 1;
-
-            if ((nextXIndex >= gameField.width || gameField.cells[nextXIndex, position.y].getStatus().Equals(CellStatus.MINE))
-                && (nextYIndex >= gameField.height || gameField.cells[position.x, nextYIndex].getStatus().Equals(CellStatus.MINE)))
-            {
-                isPlayeble = false;
-            }
-
-            return isPlayeble;
-        }
-
         public object Clone()
         {
             return new GameField(height, width, cellSize, mineCount, (Position)position.Clone(), rawCells, (Cell[,])cells.Clone(), isPlayeble, bot, isBotTurn);
