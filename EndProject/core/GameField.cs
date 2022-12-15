@@ -13,8 +13,7 @@ namespace EndProject.core
         public int cellSize;
         public int mineCount;
         public Position position = new Position(0, 0);
-        public int[,] rawCells;
-        public int[] x;
+        public int[,] rawCells; 
         public Cell[,] cells;
         public bool isPlayeble = true;
         public Bot bot;
@@ -35,11 +34,11 @@ namespace EndProject.core
 
             if (!cell.gameField.HasNextMove() && gameField.bot.getBotTurn())
             {
-                MessageBox.Show("You win", "Message");
+                MessageBox.Show("You win!!!", "First player Win!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else if (!cell.gameField.HasNextMove() && !gameField.bot.getBotTurn())
             {
-                MessageBox.Show("You lose", "Message");
+                MessageBox.Show("You lose!!!","Second player Win!", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
 
@@ -83,10 +82,11 @@ namespace EndProject.core
                     else { mapCreate[x, y] = 0; }
                 }
             }
-            mapCreate = MapCheck(mapCreate);
+            mapCreate[0, 0] = 0;
+            mapCreate = EditingToGoodMap(mapCreate);
             return mapCreate;
         }
-        public int[,] MapCheck(int[,] map)
+        public int[,] EditingToGoodMap(int[,] map)
         {
             int[] position = new int[2];
             for (int i = 0; i < width; i++)
@@ -103,8 +103,14 @@ namespace EndProject.core
                     {
                         if (map[position[0] + 1, position[1]] == 1 && map[position[0], position[1] + 1] == 1 )
                         {
-                            map[position[0] + 1, position[1]] = 0;
-                            map[position[0], position[1] + 1] = 0;
+                            if (i == 0)
+                            {
+                                map[position[0] + 1, position[1]] = 0;
+                            }
+                            else
+                            {
+                                map[position[0], position[1] + 1] = 0;
+                            }
                         }
                     }
                     else if (position[0] + 1 < map.GetLength(0))

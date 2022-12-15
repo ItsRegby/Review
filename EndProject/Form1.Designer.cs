@@ -68,7 +68,7 @@
             this.NormalMapMenuItem,
             this.BigMapMenuItem});
             this.SizeMenuItem.Name = "SizeMenuItem";
-            this.SizeMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.SizeMenuItem.Size = new System.Drawing.Size(151, 26);
             this.SizeMenuItem.Text = "Map size";
             // 
             // SmallMapMenuItem
@@ -95,7 +95,7 @@
             // QuitMenuItem
             // 
             this.QuitMenuItem.Name = "QuitMenuItem";
-            this.QuitMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.QuitMenuItem.Size = new System.Drawing.Size(151, 26);
             this.QuitMenuItem.Text = "Quit";
             this.QuitMenuItem.Click += new System.EventHandler(this.QuitMenuItem_Click);
             // 
@@ -113,7 +113,6 @@
             this.BackColor = System.Drawing.Color.Cyan;
             this.ClientSize = new System.Drawing.Size(914, 600);
             this.Controls.Add(this.Menu);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MainMenuStrip = this.Menu;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form1";
