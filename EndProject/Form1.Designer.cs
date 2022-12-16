@@ -68,7 +68,7 @@
             this.NormalMapMenuItem,
             this.BigMapMenuItem});
             this.SizeMenuItem.Name = "SizeMenuItem";
-            this.SizeMenuItem.Size = new System.Drawing.Size(151, 26);
+            this.SizeMenuItem.Size = new System.Drawing.Size(224, 26);
             this.SizeMenuItem.Text = "Map size";
             // 
             // SmallMapMenuItem
@@ -95,7 +95,7 @@
             // QuitMenuItem
             // 
             this.QuitMenuItem.Name = "QuitMenuItem";
-            this.QuitMenuItem.Size = new System.Drawing.Size(151, 26);
+            this.QuitMenuItem.Size = new System.Drawing.Size(224, 26);
             this.QuitMenuItem.Text = "Quit";
             this.QuitMenuItem.Click += new System.EventHandler(this.QuitMenuItem_Click);
             // 

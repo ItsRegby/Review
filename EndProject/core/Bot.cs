@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Linq.Expressions;
+using System.Drawing;
 using System.Text;
 
 namespace EndProject.core
@@ -11,6 +12,7 @@ namespace EndProject.core
         private Cell[,] cells;
         private Position position;
         private bool isBotTurn = true;
+        public bool CheatMode = false;
         private CellStatus[,] boardStatuses;
 
         public Bot(GameField gameField)
@@ -58,6 +60,11 @@ namespace EndProject.core
                 for (int i = 0; i < w; i++)
                 {
                     sb.Append(boardStatuses[i, j].Name() + " ");
+                    /*if (!boardStatuses[i, j].Equals(CellStatus.MINE))
+                    {
+                        cells[i, j].Font = new Font("Consolos", 18);
+                        cells[i, j].Text = boardStatuses[i, j].Name();
+                    }*/
                 }
                 sb.Append('\n');
             }

@@ -10,7 +10,8 @@ namespace EndProject
         public int width = 15;
         public const int cellSize = 50;
         public GameField gameField;        
-        private int mineCount = 25;
+        private const int mineCount = 25;
+        public bool CheatMode = false;
             
         
         public Form1()
