@@ -12,7 +12,6 @@ namespace EndProject.core
         private Cell[,] cells;
         private Position position;
         private bool isBotTurn = true;
-        public bool CheatMode = false;
         private CellStatus[,] boardStatuses;
 
         public Bot(GameField gameField)

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="EndProject.core.Position">
+    <Position X="9.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAgAAAAAAAAAAAAAAAAABgAAAAABA=</HashCode>
+      <FileName>core\Position.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="EndProject.core.GameField">
+    <Position X="5.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAGAAABAAAAAAAQIQACAZgACQAAAAAAAIAAGAggAIBA=</HashCode>
+      <FileName>core\GameField.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="EndProject.core.Cell">
+    <Position X="10.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAACAABFABAABgAAAAACA=</HashCode>
+      <FileName>core\Cell.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EndProject.core.CellStatus">
+    <Position X="2.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAA4AEAAAAAABAAIA4CBAAAAEAAAAQAAAQIAAA=</HashCode>
+      <FileName>core\CellStatus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EndProject.core.Bot">
+    <Position X="8" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAIAACAAAEASAIkAAAJBACAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>core\Bot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

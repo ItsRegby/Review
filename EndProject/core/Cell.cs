@@ -37,7 +37,6 @@ namespace EndProject.core
         private void UpdateImage()
         {
             base.Image = status.getImage();
-            
         }
 
         public void setStatus(CellStatus status)
@@ -49,7 +48,6 @@ namespace EndProject.core
         {
             return status;
         }
-        public override string ToString() { return $"Status: {status}, X: {x}, Y: {y}]"; }
 
     }
 }
